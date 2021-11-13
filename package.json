@@ -1,0 +1,27 @@
+{
+  "name": "csci-331-final-project",
+  "version": "1.0.0",
+  "description": "Website for CSCI 331",
+  "main": "scraper.js",
+  "scripts": {
+    "start": "nodemon scraper.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjhess19/csci-331-final-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjhess19/csci-331-final-project/issues"
+  },
+  "homepage": "https://github.com/cjhess19/csci-331-final-project#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}
