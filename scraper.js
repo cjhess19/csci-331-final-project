@@ -248,6 +248,58 @@ async function discovery(){
     return resortDocument;
 }
 
+async function turner(){
+    let resortDocument = {
+        "name": "Turner Mountain",
+        "Senior (62+)": "$35",
+        "Adult (19-64)": "$42",
+        "Tenn (13-18)": "$30",
+        "Child (7-12)": "$25" 
+    }
+    return resortDocument;
+}
+async function blacktail(){
+    let resortDocument = {
+        "name": "Blacktail Mountain",
+        "Senior (70+)": "$26",
+        "Adult (18-69)": "$50",
+        "Teen (13-17)": "$35",
+        "Child (8-12)": "$25",
+    }
+    return resortDocument;
+}
+async function bearpaw(){
+    let resortDocument = {
+        "name": "Bear Paw Ski Bowl",
+        "Senior (80+)": "FREE",
+        "Adult (18-79)": "$25",
+        "Youth (9-17)": "$20",
+        "Child (0-8)": "FREE" 
+    }
+    return resortDocument;
+}
+async function lookout(){
+    let resortDocument = {
+        "name": "Lookout Pass Ski Area",
+        "Super Senior (80+)": "FREE",
+        "Senior (62-79)": "$47",
+        "Adult (18-61)": "$59",
+        "Youth (7-17)": "$47",
+        "Child (0-6)": "FREE" 
+    }
+    return resortDocument;
+}
+async function tetonpass(){
+    let resortDocument = {
+        "name": "Teton Pass",
+        "Senior (65+)": "$45",
+        "Adult (18-64)": "$50",
+        "Youth (7-17)": "$45",
+        "Child (0-6)": "FREE" 
+    }
+    return resortDocument;
+}
+
 // The database to use
 const dbName = "SkiResorts";
 
@@ -263,7 +315,7 @@ async function run() {
         // select resorts collection
         const col = db.collection("resorts");
 
-        // Read bridher data into db
+        // Read bridger data into db
         let resortDocument = await bridger();
         const brid = await col.insertOne(resortDocument);
 
@@ -295,14 +347,33 @@ async function run() {
         resortDocument = await greatDivide();
         const great = await col.insertOne(resortDocument);
 
-        // Read great divide data into db
+        // Read snowbowl data into db
         resortDocument = await snowbowl();
         const snow = await col.insertOne(resortDocument);
 
-        // Read great divide data into db
+        // Read maverik data into db
         resortDocument = await maverik();
         const mav = await col.insertOne(resortDocument);
 
+        // Read turner mountain data in
+        resortDocument = await turner();
+        const turn = await col.insertOne(resortDocument);
+
+        // Read blacktail mountain data in
+        resortDocument = await blacktail();
+        const black = await col.insertOne(resortDocument);
+
+        // Read teton pass data in
+        resortDocument = await tetonpass();
+        const teton = await col.insertOne(resortDocument);
+
+        // Read lookout mountain data in
+        resortDocument = await lookout();
+        const look = await col.insertOne(resortDocument);
+
+        // Read bear paw data in
+        resortDocument = await bearpaw();
+        const bear = await col.insertOne(resortDocument);
 
     } catch (err) {
         console.log(err.stack);
@@ -316,8 +387,5 @@ async function run() {
 function replaceAll(str, find, replace) {
     return str.replace(new RegExp(find, 'g'), replace);
 }
-
-
-
 
 app.listen(PORT, () => console.log('Server running on PORT ' + PORT))
