@@ -34,6 +34,7 @@ async function whitefish() {
             scrapedData.push(tableRow)
         }
     })
+    console.log(scrapedData)
 
     // Construct a document                                                                                                                                                              
     let resortDocument = {
