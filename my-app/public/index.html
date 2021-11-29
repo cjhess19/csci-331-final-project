@@ -45,7 +45,7 @@
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </style>
-    <title>React App</title>
+    <title>Powder Portal</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -60,10 +60,38 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script type="text/javascript">
-      $(function () {
-          $('#datepicker').datepicker();
-      });
-  </script>
+
+   
   </body>
 </html>
+
+<script type="text/javascript">
+  $(function () {
+      $('#datepicker').datepicker();
+  });
+
+
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("popup-page");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>

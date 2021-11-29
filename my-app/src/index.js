@@ -15,6 +15,7 @@ ReactDOM.render(
       <Routes>
         <Route exact path="/ski" element={<Ski />} />
         <Route path="/" element={<Main />} />
+        <Route exact path="/main" element={<Main />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
