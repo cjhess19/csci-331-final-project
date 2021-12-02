@@ -4,10 +4,22 @@ export default class AutoCompleteText extends React.Component{
     constructor(props){
         super(props);
         this.items = [
-            'Bridger Bowl',
-            'Whitefish Mountain Resort',
-            'Big Sky Resort',
-            'Blacktail Mountain'
+            'Bridger Bowl Ski Resort',
+            'Whitefish Ski Resort',
+            'Big Sky Ski Resort',
+            'Blacktail Mountain',
+            'Red Lodge Ski Resort',
+            'Discovery Ski Resort',
+            'Lost Trail Ski Resort',
+            'Showdown Ski Resort',
+            'Great Divide Ski Resort',
+            'Montana Snow Bowl',
+            'Maverik Ski Resort',
+            'Turner Mountain',
+            'Blacktail Mountain',
+            'Teton Pass',
+            'Lookout Pass Ski Area',
+            'Bear Pass Ski Bowl'
         ];
         this.state ={
             suggestions: [],
