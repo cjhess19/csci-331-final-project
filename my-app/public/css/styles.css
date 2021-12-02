@@ -1,0 +1,183 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/background.jpg')no-repeat center fixed;
+  background-size: cover;
+  min-height: 800px;
+}
+
+h2 {
+  color: white;
+  filter: drop-shadow(2px 2px 5px grey);
+}
+
+.welcome {
+  color: white;
+}
+
+form {
+  padding-top: 20px;
+}
+
+hr:not([size]) {
+  color: white;
+  height: 5px;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters>[class^="col-"],
+.row.no-gutters>[class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.go-button {
+  color: white;
+}
+
+footer {
+  min-height: 100px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+}
+
+.card-footer {
+  background-color: #78A9DD;
+}
+
+.col-10 {
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 10px;
+  height: 500px;
+  width: 900px;
+  margin-top: -9px;
+}
+
+.h7 {
+  color: #78A9DD;
+}
+
+.resorts {
+  align-items: center;
+
+}
+
+.card-body {
+  margin-top: -9px;
+  text-align: center;
+}
+
+.card-title {
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.btn-sm {
+  color: White;
+  background-color: #78A9DD;
+}
+
+.fa {
+  color: #78A9DD;
+}
+
+.footer_logo {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+}
+
+.icon-style {
+  width: 25px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 50%;
+}
+
+.custom-icon {
+  height: 90px;
+  width: auto;
+}
+.icon-label{
+  font-size: 20px;
+  color: #78A9DD;
+  margin-left:5px;
+  margin-top:10px;
+}
+
+.socialmedia {
+  padding-top: 170px;
+  min-width: 400px;
+}
+
+.specialRow{
+  text-align:center;
+justify-content: center;
+}
+
+.iconRow{
+  padding-bottom:50px;
+}
+
+.footerLogo{
+  height:90px;
+}
+
+
+
+.popover {
+min-height:200px;
+min-width: 500px;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height:450px;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container-fluid{
+  --bs-gutter-x: 0rem;
+}
+
+.navbar-brand{
+  padding-left:7px;
+}
