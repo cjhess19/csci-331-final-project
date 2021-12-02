@@ -177,7 +177,16 @@ min-width: 500px;
 .container-fluid{
   --bs-gutter-x: 0rem;
 }
-
+.card{
+  background-color: white;
+  height: 500px;
+  text-align: center;
+  
+}
 .navbar-brand{
   padding-left:7px;
+}
+h5{
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
