@@ -9,21 +9,17 @@ import AutoCompleteText from "./AutoCompleteText";
 export default function App() {
   //active changes state based on which Resort the user enters
   //active's state affects which ticket price table is displayed
-  const [active, setActive] = useState("");
+
   //data changes state based on the Resort the user enters and is used to update
   //actives state
-  const [data, setData] = useState(null);
+  const [data, setData] = useState("");
+
   //this state is to keep track of if the user has clicke lets go
-
-  //This function is called when the user enters input into the Enter Resorts box
-  function getData(val) {
-    //setData sets data state to be what the user enters into the input box
-    setData(val.target.value);
-    //set active sets the card to appear to be the one associated with the resort enterd by the user
-    setActive(val.target.value);
-    console.warn(val.target.value);
+ 
+  function getData(){
+    return data;
   }
-
+  
   return (
     <div>
       <body>
@@ -58,17 +54,25 @@ export default function App() {
                     </div>
 
                     <div class="col-7 padding-0">
-                      <input
-                        type="text"
-                        placeholder="Enter Resort"
-                        className="form-control"
-                        onChange={getData}
-                      ></input>
+                    {/* <AutoCompleteText input
+                          type="text"
+                          placeholder="Enter Resort"
+                          className="form-control"
+                          onChange={event => setData(event.target.value)}
+                          
+                          /> */}
+                          <input
+                            type="text"
+                            placeholder="Enter Resort"
+                            className="form-control"
+                            onChange={event => setData(event.target.value)}
+                            ></input>
                     </div>
                     <div class="col-1 padding-0">
                       <button
                         type="button"
                         class="go-button btn btn-outline-light bt-light"
+                        onClick={getData}
                       >
                         Let's Go
                       </button>
@@ -83,8 +87,8 @@ export default function App() {
         <div>
           {/* if active = desired result, render the table to display data from 
         the index in the json associated with that resort */}
-          {active === "Bridger" && <Table data={Data} tableIndex={0} />}
-          {active === "Whitefish" && <Table data={Data} tableIndex={1} />}
+          {/* {active === "Bridger" && <Table data={Data} tableIndex={0} />}
+          {active === "Whitefish" && <Table data={Data} tableIndex={1} />} */}
         </div>
         <Footer />
       </body>
