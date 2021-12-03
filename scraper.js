@@ -29,7 +29,7 @@ async function whitefish() {
             const tds = $(element).find("td")
             const tableRow = {}
             $(tds).each((i, element) => {
-                tableRow[tableHeaders[i]] = replaceAll($(element).text(), '\n', '')
+                tableRow[tableHeaders[i]] = replaceAll($(element).text().replace('$',''),'\n','')
             })
             scrapedData.push(tableRow)
         }
@@ -64,7 +64,7 @@ async function losttrail() {
             const tds = $(element).find("td")
             const tableRow = {}
             $(tds).each((i, element) => {
-                tableRow[tableHeaders[i]] = replaceAll($(element).text(), '\n', '')
+                tableRow[tableHeaders[i]] = replaceAll($(element).text().replace('$',''),'\n','')
             })
             scrapedData.push(tableRow)
         }
@@ -97,7 +97,7 @@ async function showdown() {
             const tds = $(element).find("td")
             const tableRow = {}
             $(tds).each((i, element) => {
-                tableRow[tableHeaders[i]] = replaceAll($(element).text(), '\n', '')
+                tableRow[tableHeaders[i]] = replaceAll($(element).text().replace('$',''),'\n','')
             })
             scrapedData.push(tableRow)
         }
@@ -129,7 +129,7 @@ async function greatDivide() {
         const tds = $(element).find("td")
         const tableRow = {}
         $(tds).each((i, element) => {
-            tableRow[tableHeaders[i]] = replaceAll($(element).text(), '\n','')
+            tableRow[tableHeaders[i]] = replaceAll($(element).text().replace('$',''),'\n','')
         })
         scrapedData.push(tableRow)
     })
@@ -161,7 +161,7 @@ async function snowbowl() {
         const tds = $(element).find("td")
         const tableRow = {}
         $(tds).each((i, element) => {
-            tableRow[tableHeaders[i]] = replaceAll($(element).text(), '\n','')
+            tableRow[tableHeaders[i]] = replaceAll($(element).text().replace('$',''),'\n','')
         })
         scrapedData.push(tableRow)
     })
@@ -192,7 +192,7 @@ async function maverik() {
         const tds = $(element).find("td")
         const tableRow = {}
         $(tds).each((i, element) => {
-            tableRow[tableHeaders[i]] = replaceAll($(element).text(), '\n','')
+            tableRow[tableHeaders[i]] = replaceAll($(element).text().replace('$',''),'\n','')
         })
         scrapedData.push(tableRow)
     }
@@ -241,9 +241,9 @@ async function redlodge(){
 async function discovery(){
     let resortDocument = {
         "name": "Discovery Ski Resort",
-        "Senior (65+)": "$52",
-        "Adult (19-64)": "$59",
-        "Child (6-12)": "$30" 
+        "Senior (65+)": "52",
+        "Adult (19-64)": "59",
+        "Child (6-12)": "30" 
     }
     return resortDocument;
 }
@@ -251,20 +251,20 @@ async function discovery(){
 async function turner(){
     let resortDocument = {
         "name": "Turner Mountain",
-        "Senior (62+)": "$35",
-        "Adult (19-64)": "$42",
-        "Tenn (13-18)": "$30",
-        "Child (7-12)": "$25" 
+        "Senior (62+)": "35",
+        "Adult (19-64)": "42",
+        "Tenn (13-18)": "30",
+        "Child (7-12)": "25" 
     }
     return resortDocument;
 }
 async function blacktail(){
     let resortDocument = {
         "name": "Blacktail Mountain",
-        "Senior (70+)": "$26",
-        "Adult (18-69)": "$50",
-        "Teen (13-17)": "$35",
-        "Child (8-12)": "$25",
+        "Senior (70+)": "26",
+        "Adult (18-69)": "50",
+        "Teen (13-17)": "35",
+        "Child (8-12)": "25",
     }
     return resortDocument;
 }
@@ -272,8 +272,8 @@ async function bearpaw(){
     let resortDocument = {
         "name": "Bear Paw Ski Bowl",
         "Senior (80+)": "FREE",
-        "Adult (18-79)": "$25",
-        "Youth (9-17)": "$20",
+        "Adult (18-79)": "25",
+        "Youth (9-17)": "20",
         "Child (0-8)": "FREE" 
     }
     return resortDocument;
@@ -282,9 +282,9 @@ async function lookout(){
     let resortDocument = {
         "name": "Lookout Pass Ski Area",
         "Super Senior (80+)": "FREE",
-        "Senior (62-79)": "$47",
-        "Adult (18-61)": "$59",
-        "Youth (7-17)": "$47",
+        "Senior (62-79)": "47",
+        "Adult (18-61)": "59",
+        "Youth (7-17)": "47",
         "Child (0-6)": "FREE" 
     }
     return resortDocument;
@@ -292,9 +292,9 @@ async function lookout(){
 async function tetonpass(){
     let resortDocument = {
         "name": "Teton Pass",
-        "Senior (65+)": "$45",
-        "Adult (18-64)": "$50",
-        "Youth (7-17)": "$45",
+        "Senior (65+)": "45",
+        "Adult (18-64)": "50",
+        "Youth (7-17)": "45",
         "Child (0-6)": "FREE" 
     }
     return resortDocument;
