@@ -25,8 +25,8 @@ export default function App() {
   }
 
   return (
-    <div>
-      <body>
+    <body>
+      <div>
         <Header />
 
         <main>
@@ -84,11 +84,13 @@ export default function App() {
           {/* if active = desired result, render the table to display data from 
         the index in the json associated with that resort */}
           {active === "Bridger" && <Table data={Data} tableIndex={0} />}
-          {active === "Whitefish" && <Table data={Data} tableIndex={1} />}
+          {(active === "Whitefish" && <Table data={Data} tableIndex={1} />) ||
+            (active === "whitefish" && <Table data={Data} tableIndex={1} />) ||
+            (active === "big mountain" && <Table data={Data} tableIndex={1} />)}
         </div>
         <Footer />
-      </body>
-    </div>
+      </div>
+    </body>
   );
 }
 const Header = () => {
@@ -108,9 +110,6 @@ const Footer = () => {
     <div class="footer footer-margin fixed-bottom">
       <footer class="card-footer footer-font-style text-muted footer-position" />
       <div class="col-1" style={{ minWidth: "400px;" }}>
-        <i class="fa fa-facebook-f fab"></i>
-        <i class="fa fa-twitter fab"></i>
-        <i class="fa fa-instagram fab"></i>
         <div class="footer_logo">
           <img
             src="images/footer.png"
