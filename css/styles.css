@@ -1,5 +1,6 @@
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/background.jpg')no-repeat center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/background.jpg") no-repeat center fixed;
   background-size: cover;
   min-height: 800px;
 }
@@ -27,8 +28,8 @@ hr:not([size]) {
   margin-left: 0;
 }
 
-.row.no-gutters>[class^="col-"],
-.row.no-gutters>[class*=" col-"] {
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -47,7 +48,7 @@ footer {
 }
 
 .card-footer {
-  background-color: #78A9DD;
+  background-color: #78a9dd;
 }
 
 .col-10 {
@@ -60,12 +61,11 @@ footer {
 }
 
 .h7 {
-  color: #78A9DD;
+  color: #78a9dd;
 }
 
 .resorts {
   align-items: center;
-
 }
 
 .card-body {
@@ -80,11 +80,11 @@ footer {
 
 .btn-sm {
   color: White;
-  background-color: #78A9DD;
+  background-color: #78a9dd;
 }
 
 .fa {
-  color: #78A9DD;
+  color: #78a9dd;
 }
 
 .footer_logo {
@@ -107,14 +107,26 @@ footer {
   height: 90px;
   width: auto;
 }
-.icon-label{
+.icon-label {
   font-size: 20px;
-  color: #78A9DD;
-  margin-left:5px;
-  margin-top:10px;
+  color: #78a9dd;
+  margin-left: 5px;
+  margin-top: 10px;
 }
 
 .socialmedia {
   padding-top: 170px;
   min-width: 400px;
+}
+tbody {
+  color: white;
+  margin: 30px;
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+td {
+  padding-right: 70px;
 }

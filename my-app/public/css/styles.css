@@ -190,3 +190,9 @@ h5{
   padding-top: 20px;
   padding-bottom: 10px;
 }
+tbody{
+  background-color:white;
+}
+#ticketTable{
+  text-align:center;
+}
