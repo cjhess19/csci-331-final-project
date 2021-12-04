@@ -22,6 +22,9 @@
     <link href="sticky-footer.css" rel="stylesheet">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Search.js"></script>
+    <script src="Search1.js"></script>
+    <!-- <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script> -->
     </style>
     <title>Powder Portal</title>
 </head>
@@ -56,11 +59,10 @@
                                     </div>
                                 </div>
                                 <div class="col-7 padding-0">
-                                    <input type="text" placeholder="Enter Resort" class="form-control">
+                                    <input id="resortInput" type="text" placeholder="Enter Resort" class="form-control">
                                 </div>
                                 <div class="col-2 padding-0">
-                                    <a href="page.html"><button type="button"
-                                            class="go-button btn btn-outline-light bt-light">Let's Go</button></a>
+                                    <button onclick=print() type="button" class="go-button btn btn-outline-light bt-light">Let's Go</button></a>
                                 </div>
                             </div>
                         </form>
@@ -70,6 +72,11 @@
             </div>
             </div>
         </section>
+        <div>
+        <table  id="ticketTable">
+            <!-- Where our table goes once the button is pressed -->
+        </table>
+        </div>
     </main>
     <div class="footer footer-margin fixed-bottom">
         <footer class="card-footer footer-font-style text-muted footer-position" style="min-height:230px;">
